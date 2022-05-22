@@ -1,0 +1,13 @@
+version: '3'
+services:
+  content:
+    image: caas
+    ports:
+    - 8080:8080
+    dns: 8.8.8.8
+    depends_on:
+    - mongodb
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
